@@ -1,0 +1,19 @@
+<h1 class="my-5">TV Shows</h1>
+
+<h5 class="text-danger">There are <%= @shows.count %> TV Shows</h5>
+
+<div class="my-5 row">
+    <% @shows.each do |show| %>
+        <div class="mb-5 col">
+            <div class="card">
+                <h5>Name: <%= show.name %></h5>
+                <h5>Synopsis: <%= show.synopsis %></h5>
+                <p>Director: <%= show.director %></p>
+            </div>
+        </div>
+    <% end %>
+</div>
+
+<div class="my-3">
+    <%= link_to "Add another TV Show", tv_shows_new_path, class:"btn btn-secondary" %>
+</div>
